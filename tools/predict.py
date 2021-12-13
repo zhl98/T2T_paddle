@@ -39,12 +39,7 @@ if __name__ == '__main__':
     pre_y = model(data)
     
     print("class_id is: {}".format(pre_y.argmax().item()))
-    #model = paddle.Model(model)
-    #model.prepare(metrics=paddle.metric.Accuracy(topk=(1, 5)))  
-    
-    #dataset_val = get_dataset( mode='val')
-    #val_sampler = DistributedBatchSampler(dataset_val, batch_size=128, drop_last=False)
-    #dataloader_val = paddle.io.DataLoader(dataset_val,batch_sampler = val_sampler,num_workers=12)
+
 
     
 

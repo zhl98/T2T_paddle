@@ -33,22 +33,49 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
 * 本代码在AIstudio上可以通过fork立马运行，只需要执行里面的val.sh即可避免了环境配置的各种问题
 ## 4. 快速开始
 ### 第一步：克隆本项目
+```
     #clone this repo    
-    https://github.com/zhl98/T2T_Vit_paddle.git
-    cd T2T_Vit_paddle
+    https://github.com/zhl98/T2T_paddle.git
+    cd T2T_paddle
+```
 ### 第二步：修改代码路径
 修改dataset.py中的数据集路径    
 1. 修改dataset的地址
-2. 修改label.txt的地址
+2. 修改label.txt的地址    
+项目中默认使用lit_data中的路径进行测试
 ### 第三步：训练模型
-运行sh文件，在文件中可以选择单卡或是多卡训练    
-
+运行sh文件，在文件中可以选择单卡或是多卡训练  
+```
     bash ./scripts/train.sh
+```
+部分训练日志如下所示。
+```
+Epoch [98/200], Step [300/1252], Loss: 1.4250,acc: 0.6624, read_time: 0.0069, train_time: 0.4234, lr: 0.0009
+Epoch [98/200], Step [400/1252], Loss: 1.4264,acc: 0.6627, read_time: 0.0037, train_time: 0.3946, lr: 0.0009
+```
 ### 第四步：验证模型
+```
     bash ./scripts/val.sh
+```
+部分验证日志如下所示。
+```
+Step [180/196], acc: 0.7163, read_time: 1.4773
+Step [190/196], acc: 0.7157, read_time: 1.1667
+ImageNet final val acc is:0.7156
+```
+### 第五步：验证预测
+```
+    python ./tools/predict.py
+```
+![模型示意图](./images/n07579787_1228.JPEG)
+输出结果为
 
-## 4.代码结构与详细说明
-### 4.1 
+```
+    class_id is: 923
+```
+对照lit_data中的标签，可知预测正确
+## 5.代码结构与详细说明
+### 5.1 
 
 
 ```
@@ -57,17 +84,12 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
     |-- log      #日志
     |   |-- trainer-0-信息不全.log 
     |   |-- val-workerlog.0 
-    |   |-- trainer-0-(1).log   #有时间信息  第一步
-    |   |-- trainer-0-(2).log   # 第二步训练
-    |-- lit_data  #数据目录
-    |   |-- train   #训练集目录
-    |   |-- val     #验证集目录
-    |   |-- train.txt   #训练集标签
-    |   |-- val.txt     #验证集标签
+    |   |--trainer-0-(1).log   #有时间信息  第一步
+    |   |--trainer-0-(2).log   # 第二步训练
+    |-- lit_data    #模型目录
     |-- output    #模型目录
-    |   |-- t2t_vit_7.pdparams   #最终模型参数
     |-- scripts   #运行脚本
-    |   |-- eval.sh          
+    |   |-- eval.sh
     |   |-- train.sh
     |-- tools   #源码文件
         |-- common.py    #基础类的封装
@@ -77,8 +99,7 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
         |-- train.py	 #训练代码
         |-- val.py		 #验证代码
         |-- predict.py	 #预测代码
-    |-- README.md 
-    |-- requirements.txt #配置信息
+    |-- README.md      
 
 ```
 

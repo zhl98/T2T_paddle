@@ -15,9 +15,9 @@ class ImageNet2012Dataset(Dataset):
         self.label_list = []
 
         if mode == "train":
-            self.list_file = "/opt/data/common/ImageNet/ILSVRC2012/train.txt"
+            self.list_file = "lit_data/train.txt"
         else:
-            self.list_file = "/opt/data/common/ImageNet/ILSVRC2012/val(1).txt"
+            self.list_file = "lit_data/val.txt"
 
         with open(self.list_file, 'r') as infile:
             for line in infile:
@@ -63,11 +63,11 @@ def get_dataset(mode='train'):
     assert mode in ['train', 'val']
     
     if mode == 'train':
-        dataset = ImageNet2012Dataset('/opt/data/common/ImageNet/ILSVRC2012/train',
+        dataset = ImageNet2012Dataset('lit_data/train',
                                           mode=mode,
                                           transform=get_train_transforms())
     else:
-        dataset = ImageNet2012Dataset('/opt/data/common/ImageNet/ILSVRC2012/val',
+        dataset = ImageNet2012Dataset('lit_data/val',
                                           mode=mode,
                                           transform=vals_transform)
     return dataset
