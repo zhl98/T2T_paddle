@@ -434,6 +434,6 @@ def t2t_vit_7(pretrained=False, **kwargs):
         num_heads=4, mlp_ratio=2., **kwargs
     )
     if pretrained:
-        params = paddle.load('./output/t2t_vit_7_final.pdparams')
+        params = paddle.load('./output/t2t_vit_7.pdparams')
         model.set_dict(params)
     return model

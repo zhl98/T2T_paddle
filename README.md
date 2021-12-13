@@ -57,11 +57,17 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
     |-- log      #日志
     |   |-- trainer-0-信息不全.log 
     |   |-- val-workerlog.0 
-    |   |--trainer-0-(1).log   #有时间信息  第一步
-    |   |--trainer-0-(2).log   # 第二步训练
+    |   |-- trainer-0-(1).log   #有时间信息  第一步
+    |   |-- trainer-0-(2).log   # 第二步训练
+    |-- lit_data  #数据目录
+    |   |-- train   #训练集目录
+    |   |-- val     #验证集目录
+    |   |-- train.txt   #训练集标签
+    |   |-- val.txt     #验证集标签
     |-- output    #模型目录
+    |   |-- t2t_vit_7.pdparams   #最终模型参数
     |-- scripts   #运行脚本
-    |   |-- eval.sh
+    |   |-- eval.sh          
     |   |-- train.sh
     |-- tools   #源码文件
         |-- common.py    #基础类的封装
@@ -70,7 +76,9 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
         |-- t2t.py		 #网络模型定义	
         |-- train.py	 #训练代码
         |-- val.py		 #验证代码
-    |-- README.md      
+        |-- predict.py	 #预测代码
+    |-- README.md 
+    |-- requirements.txt #配置信息
 
 ```
 
