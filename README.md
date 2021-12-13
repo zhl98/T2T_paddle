@@ -67,15 +67,16 @@ ImageNet final val acc is:0.7156
 ```
     python ./tools/predict.py
 ```
-![模型示意图](./images/n07579787_1228.JPEG)
+![模型示意图](./images/n07579787_1228.JPEG)    
+
 输出结果为
 
 ```
     class_id is: 923
 ```
 对照lit_data中的标签，可知预测正确
-## 5.代码结构与详细说明
-### 5.1 
+## 5.代码结构
+
 
 
 ```
