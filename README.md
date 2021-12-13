@@ -111,6 +111,7 @@ ImageNet final val acc is:0.7156
         |-- val.py		 #验证代码
         |-- predict.py	 #预测代码
     |-- README.md      
+    |-- requirements.txt
 
 ```
 
