@@ -24,18 +24,22 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
 
 目标精度：71.7%
 实现：71.56%
-模型参数下载地址：
+模型参数下载地址：百度网盘链接：https://pan.baidu.com/s/1A2az_B51ywsUbDCAFvXTvQ 
+提取码：6ib9
 
 ## 3. 准备环境
 * 硬件：Tesla V100 * 4
 * 框架：PaddlePaddle == 2.2.0
+* 本代码在AIstudio上可以通过fork立马运行，只需要执行里面的val.sh即可避免了环境配置的各种问题
 ## 4. 快速开始
 ### 第一步：克隆本项目
     #clone this repo    
     https://github.com/zhl98/T2T_Vit_paddle.git
     cd T2T_Vit_paddle
 ### 第二步：修改代码路径
-修改dataset.py中的数据集路径
+修改dataset.py中的数据集路径    
+1. 修改dataset的地址
+2. 修改label.txt的地址
 ### 第三步：训练模型
 运行sh文件，在文件中可以选择单卡或是多卡训练    
 
