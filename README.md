@@ -17,13 +17,15 @@
 ## 2. 数据集和复现精度
 数据集使用ImageNet 2012的训练数据集，有1000类，训练集图片有1281167张，验证集图片有50000张，大小为144GB  
 aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/79807  
+
 |  网络   | steps  |  opt  | image_size   | batch_size | dataset   | epoch  |params_size|
 |  ----  | ----  | ----    |  ----       | ----          |----  | ----  |----  |
 | t2t-vit  | 1252  | AdamW | 224x224    |1024        |ImageNet| 320 |16.45MB|
 
 目标精度：71.7%
-实现：71.82%
+实现：71.56%
 模型参数下载地址：
+
 ## 3. 准备环境
 * 硬件：Tesla V100 * 4
 * 框架：PaddlePaddle == 2.2.0
@@ -49,8 +51,10 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
 
 |-- T2T_ViT_Paddle
     |-- log      #日志
-    |   |-- trainer-0.log 
-    |   |-- vallog-0.log 
+    |   |-- trainer-0-信息不全.log 
+    |   |-- val-workerlog.0 
+    |   |--trainer-0-(1).log   #有时间信息  第一步
+    |   |--trainer-0-(2).log   # 第二步训练
     |-- output    #模型目录
     |-- scripts   #运行脚本
     |   |-- eval.sh

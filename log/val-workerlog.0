@@ -1,0 +1,30 @@
+/opt/_internal/cpython-3.7.0/lib/python3.7/site-packages/paddle/distributed/parallel.py:136: UserWarning: Currently not a parallel execution environment, `paddle.distributed.init_parallel_env` will not do anything.
+  "Currently not a parallel execution environment, `paddle.distributed.init_parallel_env` will not do anything."
+W1213 16:49:03.670991   472 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 7.0, Driver API Version: 10.1, Runtime API Version: 10.1
+W1213 16:49:03.677181   472 device_context.cc:465] device: 0, cuDNN Version: 7.6.
+/opt/_internal/cpython-3.7.0/lib/python3.7/site-packages/paddle/fluid/dygraph/parallel.py:596: UserWarning: The program will return to single-card operation. Please check 1, whether you use spawn or fleetrun to start the program. 2, Whether it is a multi-card program. 3, Is the current environment multi-card.
+  warnings.warn("The program will return to single-card operation. "
+Step [10/196], acc: 0.7316, read_time: 5.4652
+Step [20/196], acc: 0.7268, read_time: 1.2477
+Step [30/196], acc: 0.7251, read_time: 1.4650
+Step [40/196], acc: 0.7269, read_time: 1.4384
+Step [50/196], acc: 0.7209, read_time: 2.5817
+Step [60/196], acc: 0.7195, read_time: 1.4117
+Step [70/196], acc: 0.7197, read_time: 1.4041
+Step [80/196], acc: 0.7179, read_time: 1.4062
+Step [90/196], acc: 0.7171, read_time: 2.6570
+Step [100/196], acc: 0.7161, read_time: 1.2165
+Step [110/196], acc: 0.7158, read_time: 1.4816
+Step [120/196], acc: 0.7161, read_time: 1.2827
+Step [130/196], acc: 0.7151, read_time: 3.0173
+Step [140/196], acc: 0.7151, read_time: 1.2715
+Step [150/196], acc: 0.7161, read_time: 1.3904
+Step [160/196], acc: 0.7164, read_time: 1.3041
+Step [170/196], acc: 0.7158, read_time: 2.6070
+Step [180/196], acc: 0.7163, read_time: 1.4773
+Step [190/196], acc: 0.7157, read_time: 1.1667
+==============================================
+
+==============================================
+
+ImageNet final val acc is:0.7156
