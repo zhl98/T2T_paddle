@@ -25,7 +25,15 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
 目标精度：71.7%
 实现：71.56%
 模型参数下载地址：百度网盘链接：https://pan.baidu.com/s/1A2az_B51ywsUbDCAFvXTvQ 
-提取码：6ib9
+提取码：6ib9     
+### 2.1 log信息说明
+训练过程可以看项目中的log文件夹下的信息，由于aistudio上的脚本任务最多只能运行72个小时，把训练过程分成多个步骤进行训练，可以看见log中的信息，当然4个train-0.log并不是在同一个环境上跑的，
+*  train-0-(1).log是在aistudio上4块Tesla V100，batch_size为256*4     lr:采用先上升，在下降。从0.0002-线性上升到0.0010，再依次下降0.0005
+*  train-0-(2).log环境是2块2080ti  ,   batch_size为128*2
+*  train-0-(3).log环境是2块TITAN*24G,batch_size为256*2  log中包含了多次训练过程， lr最后一次采用 0.000075
+* trainer-0-(4).log是最后在一块2080ti上训练的过程，最后导出了最好的模型，batch_size为128，避免了多块卡上验证精度不同的问题。  lr也是逐步下降，最后为0.000005
+* trainer-0-信息不全.log 是在一开始跑的，跑了250个epoch已经很接近结果了，但是因为aistudio只能运行72小时，然后模型也没保存，学习率等参数也没打印出来，lr为一直不变的0.00002，batch_size为256*4
+* val-workerlog.0 是最后在一块卡上的验证结果，可以用来参考验收
 
 ## 3. 准备环境
 * 硬件：Tesla V100 * 4
@@ -87,6 +95,8 @@ ImageNet final val acc is:0.7156
     |   |-- val-workerlog.0 
     |   |--trainer-0-(1).log   #有时间信息  第一步
     |   |--trainer-0-(2).log   # 第二步训练
+    |   |--trainer-0-(3).log   # 第三步训练
+    |   |--trainer-0-(4).log   # 在单卡上训练模型
     |-- lit_data    #模型目录
     |-- output    #模型目录
     |-- scripts   #运行脚本
