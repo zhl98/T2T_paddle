@@ -1,215 +1,210 @@
 /usr/local/lib/python3.6/dist-packages/setuptools/depends.py:2: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
   import imp
-I1212 07:36:11.125330 22686 gen_comm_id_helper.cc:190] Server listening on: 127.0.0.1:48515 successful.
-I1212 07:36:14.081866 22686 nccl_context.cc:74] init nccl context nranks: 2 local rank: 1 gpu id: 1 ring id: 0
-W1212 07:36:14.939237 22686 device_context.cc:447] Please NOTE: device: 1, GPU Compute Capability: 7.5, Driver API Version: 11.0, Runtime API Version: 10.2
-W1212 07:36:14.944120 22686 device_context.cc:465] device: 1, cuDNN Version: 7.6.
+server not ready, wait 3 sec to retry...
+not ready endpoints:['127.0.0.1:47583']
+I1211 12:43:21.988584 62712 nccl_context.cc:74] init nccl context nranks: 2 local rank: 0 gpu id: 0 ring id: 0
+W1211 12:43:22.946369 62712 device_context.cc:447] Please NOTE: device: 0, GPU Compute Capability: 7.5, Driver API Version: 11.0, Runtime API Version: 10.2
+W1211 12:43:22.950935 62712 device_context.cc:465] device: 0, cuDNN Version: 7.6.
 ----- Imagenet2012 image train list len = 1281167
 ----- Imagenet2012 image val list len = 50000
-Epoch [0/200], Step [1000/5005], Loss: 0.9977, read_time: 0.2675, train_time: 0.1225, lr: 0.000025
-Epoch [0/200], Step [2000/5005], Loss: 1.0003, read_time: 0.1375, train_time: 0.1217, lr: 0.000025
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [0/200], Step [3000/5005], Loss: 0.9968, read_time: 0.1025, train_time: 0.1222, lr: 0.000025
-Epoch [0/200], Step [4000/5005], Loss: 0.9969, read_time: 0.5260, train_time: 0.1230, lr: 0.000025
-Epoch [0/200], Step [5000/5005], Loss: 0.9961, read_time: 0.6021, train_time: 0.1228, lr: 0.000025
-Epoch [0/200], avg_Loss: 0.9961, avg_acc: 0.7594
-ImageNet val acc is:0.7153
+Epoch [0/200], Step [100/2503], Loss: 1.0727, read_time: 0.8488, train_time: 0.2970, lr: 0.000075
+Epoch [0/200], Step [200/2503], Loss: 1.0753, read_time: 0.5483, train_time: 0.2961, lr: 0.000075
+Epoch [0/200], Step [300/2503], Loss: 1.0727, read_time: 0.5090, train_time: 0.2985, lr: 0.000075
+Epoch [0/200], Step [400/2503], Loss: 1.0725, read_time: 0.8113, train_time: 0.2968, lr: 0.000075
+Epoch [0/200], Step [500/2503], Loss: 1.0729, read_time: 1.5079, train_time: 0.2970, lr: 0.000075
+Epoch [0/200], Step [600/2503], Loss: 1.0735, read_time: 1.6457, train_time: 0.2949, lr: 0.000075
+Epoch [0/200], Step [700/2503], Loss: 1.0761, read_time: 0.7540, train_time: 0.2956, lr: 0.000075
+Epoch [0/200], Step [800/2503], Loss: 1.0771, read_time: 1.3329, train_time: 0.2959, lr: 0.000075
+Epoch [0/200], Step [900/2503], Loss: 1.0749, read_time: 0.9889, train_time: 0.2965, lr: 0.000075
+Epoch [0/200], Step [1000/2503], Loss: 1.0755, read_time: 1.2007, train_time: 0.2959, lr: 0.000075
+Epoch [0/200], Step [1100/2503], Loss: 1.0741, read_time: 0.7941, train_time: 0.2954, lr: 0.000075
+Epoch [0/200], Step [1200/2503], Loss: 1.0717, read_time: 0.8830, train_time: 0.2962, lr: 0.000075
+Epoch [0/200], Step [1300/2503], Loss: 1.0702, read_time: 2.1185, train_time: 0.2970, lr: 0.000075
+Epoch [0/200], Step [1400/2503], Loss: 1.0683, read_time: 0.8683, train_time: 0.2968, lr: 0.000075
+Epoch [0/200], Step [1500/2503], Loss: 1.0672, read_time: 1.8572, train_time: 0.2975, lr: 0.000075
+Epoch [0/200], Step [1600/2503], Loss: 1.0665, read_time: 1.2500, train_time: 0.2966, lr: 0.000075
+Epoch [0/200], Step [1700/2503], Loss: 1.0655, read_time: 1.8120, train_time: 0.2957, lr: 0.000075
+Epoch [0/200], Step [1800/2503], Loss: 1.0648, read_time: 1.1198, train_time: 0.2947, lr: 0.000075
+Epoch [0/200], Step [1900/2503], Loss: 1.0641, read_time: 2.4053, train_time: 0.2941, lr: 0.000075
+Epoch [0/200], Step [2000/2503], Loss: 1.0636, read_time: 1.8149, train_time: 0.2946, lr: 0.000075
+Epoch [0/200], Step [2100/2503], Loss: 1.0619, read_time: 1.7091, train_time: 0.2952, lr: 0.000075
+Epoch [0/200], Step [2200/2503], Loss: 1.0605, read_time: 1.9477, train_time: 0.2966, lr: 0.000075
+Epoch [0/200], Step [2300/2503], Loss: 1.0589, read_time: 2.6186, train_time: 0.2967, lr: 0.000075
+Epoch [0/200], Step [2400/2503], Loss: 1.0580, read_time: 3.3154, train_time: 0.2959, lr: 0.000075
+Epoch [0/200], Step [2500/2503], Loss: 1.0579, read_time: 2.5722, train_time: 0.2983, lr: 0.000075
+Epoch [0/200], avg_Loss: 1.0578, avg_acc: 0.7447
+model saved!
+
+ImageNet val acc is:0.7133
+avg_acc: 0.7133 model saved!
 lr update-1!
-Epoch [1/200], Step [1000/5005], Loss: 0.9909, read_time: 0.5023, train_time: 0.1231, lr: 0.000015
-Epoch [1/200], Step [2000/5005], Loss: 0.9870, read_time: 0.7861, train_time: 0.1230, lr: 0.000015
+Epoch [1/200], Step [100/2503], Loss: 1.0430, read_time: 2.4413, train_time: 0.3014, lr: 0.000050
+Epoch [1/200], Step [200/2503], Loss: 1.0366, read_time: 0.9462, train_time: 0.2957, lr: 0.000050
+Epoch [1/200], Step [300/2503], Loss: 1.0368, read_time: 0.8223, train_time: 0.2943, lr: 0.000050
+Epoch [1/200], Step [400/2503], Loss: 1.0389, read_time: 0.6025, train_time: 0.2959, lr: 0.000050
+Epoch [1/200], Step [500/2503], Loss: 1.0420, read_time: 1.3958, train_time: 0.2971, lr: 0.000050
+Epoch [1/200], Step [600/2503], Loss: 1.0414, read_time: 0.9118, train_time: 0.2948, lr: 0.000050
+Epoch [1/200], Step [700/2503], Loss: 1.0408, read_time: 1.3252, train_time: 0.2964, lr: 0.000050
+Epoch [1/200], Step [800/2503], Loss: 1.0356, read_time: 1.4027, train_time: 0.2966, lr: 0.000050
+Epoch [1/200], Step [900/2503], Loss: 1.0341, read_time: 2.2620, train_time: 0.2985, lr: 0.000050
+Epoch [1/200], Step [1000/2503], Loss: 1.0329, read_time: 1.8832, train_time: 0.2986, lr: 0.000050
+Epoch [1/200], Step [1100/2503], Loss: 1.0344, read_time: 1.4617, train_time: 0.2973, lr: 0.000050
+Epoch [1/200], Step [1200/2503], Loss: 1.0347, read_time: 0.8620, train_time: 0.2962, lr: 0.000050
+Epoch [1/200], Step [1300/2503], Loss: 1.0355, read_time: 2.0495, train_time: 0.2988, lr: 0.000050
 /usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
   warnings.warn(str(msg))
-Epoch [1/200], Step [3000/5005], Loss: 0.9876, read_time: 0.6701, train_time: 0.1233, lr: 0.000015
-Epoch [1/200], Step [4000/5005], Loss: 0.9884, read_time: 1.2814, train_time: 0.1234, lr: 0.000015
-Epoch [1/200], Step [5000/5005], Loss: 0.9875, read_time: 0.7207, train_time: 0.1234, lr: 0.000015
-Epoch [1/200], avg_Loss: 0.9874, avg_acc: 0.7618
-ImageNet val acc is:0.7157
-model saved!
-
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [2/200], Step [1000/5005], Loss: 0.9872, read_time: 0.7694, train_time: 0.1233, lr: 0.000015
-Epoch [2/200], Step [2000/5005], Loss: 0.9841, read_time: 0.8814, train_time: 0.1225, lr: 0.000015
-Epoch [2/200], Step [3000/5005], Loss: 0.9830, read_time: 0.6152, train_time: 0.1224, lr: 0.000015
-Epoch [2/200], Step [4000/5005], Loss: 0.9826, read_time: 0.8545, train_time: 0.1226, lr: 0.000015
-Epoch [2/200], Step [5000/5005], Loss: 0.9830, read_time: 1.0931, train_time: 0.1236, lr: 0.000015
-Epoch [2/200], avg_Loss: 0.9830, avg_acc: 0.7624
-ImageNet val acc is:0.7165
-avg_acc: 0.7165 model saved!
-model saved!
-
+Epoch [1/200], Step [1400/2503], Loss: 1.0355, read_time: 3.1536, train_time: 0.2989, lr: 0.000050
+Epoch [1/200], Step [1500/2503], Loss: 1.0349, read_time: 2.7403, train_time: 0.2997, lr: 0.000050
+Epoch [1/200], Step [1600/2503], Loss: 1.0356, read_time: 2.4705, train_time: 0.2996, lr: 0.000050
+Epoch [1/200], Step [1700/2503], Loss: 1.0355, read_time: 2.1870, train_time: 0.3005, lr: 0.000050
+Epoch [1/200], Step [1800/2503], Loss: 1.0345, read_time: 1.4770, train_time: 0.2993, lr: 0.000050
+Epoch [1/200], Step [1900/2503], Loss: 1.0351, read_time: 2.4581, train_time: 0.2977, lr: 0.000050
+Epoch [1/200], Step [2000/2503], Loss: 1.0353, read_time: 2.1266, train_time: 0.2978, lr: 0.000050
+Epoch [1/200], Step [2100/2503], Loss: 1.0354, read_time: 2.7947, train_time: 0.2995, lr: 0.000050
+Epoch [1/200], Step [2200/2503], Loss: 1.0355, read_time: 2.2797, train_time: 0.2983, lr: 0.000050
+Epoch [1/200], Step [2300/2503], Loss: 1.0350, read_time: 1.5577, train_time: 0.2981, lr: 0.000050
+Epoch [1/200], Step [2400/2503], Loss: 1.0344, read_time: 1.0322, train_time: 0.2987, lr: 0.000050
+Epoch [1/200], Step [2500/2503], Loss: 1.0345, read_time: 1.6908, train_time: 0.2994, lr: 0.000050
+Epoch [1/200], avg_Loss: 1.0344, avg_acc: 0.7502
+ImageNet val acc is:0.7142
+avg_acc: 0.7142 model saved!
 lr update-2!
-Epoch [3/200], Step [1000/5005], Loss: 0.9855, read_time: 0.8289, train_time: 0.1236, lr: 0.000005
-Epoch [3/200], Step [2000/5005], Loss: 0.9782, read_time: 0.8271, train_time: 0.1230, lr: 0.000005
-Epoch [3/200], Step [3000/5005], Loss: 0.9774, read_time: 0.8935, train_time: 0.1225, lr: 0.000005
-Epoch [3/200], Step [4000/5005], Loss: 0.9776, read_time: 0.8102, train_time: 0.1230, lr: 0.000005
-Epoch [3/200], Step [5000/5005], Loss: 0.9783, read_time: 0.6098, train_time: 0.1228, lr: 0.000005
-Epoch [3/200], avg_Loss: 0.9783, avg_acc: 0.7641
-ImageNet val acc is:0.7172
-avg_acc: 0.7172 model saved!
-model saved!
-
-Epoch [4/200], Step [1000/5005], Loss: 0.9701, read_time: 0.3574, train_time: 0.1232, lr: 0.000005
-Epoch [4/200], Step [2000/5005], Loss: 0.9708, read_time: 0.5852, train_time: 0.1227, lr: 0.000005
+Epoch [2/200], Step [100/2503], Loss: 1.0204, read_time: 1.1370, train_time: 0.3025, lr: 0.000075
+Epoch [2/200], Step [200/2503], Loss: 1.0224, read_time: 0.6923, train_time: 0.2967, lr: 0.000075
+Epoch [2/200], Step [300/2503], Loss: 1.0261, read_time: 1.3109, train_time: 0.2980, lr: 0.000075
+Epoch [2/200], Step [400/2503], Loss: 1.0297, read_time: 1.4138, train_time: 0.2967, lr: 0.000075
+Epoch [2/200], Step [500/2503], Loss: 1.0330, read_time: 0.9817, train_time: 0.2966, lr: 0.000075
+Epoch [2/200], Step [600/2503], Loss: 1.0368, read_time: 0.5180, train_time: 0.2961, lr: 0.000075
+Epoch [2/200], Step [700/2503], Loss: 1.0355, read_time: 0.6876, train_time: 0.2950, lr: 0.000075
+Epoch [2/200], Step [800/2503], Loss: 1.0330, read_time: 1.6261, train_time: 0.2965, lr: 0.000075
+Epoch [2/200], Step [900/2503], Loss: 1.0353, read_time: 1.7445, train_time: 0.2966, lr: 0.000075
+Epoch [2/200], Step [1000/2503], Loss: 1.0350, read_time: 1.4970, train_time: 0.2966, lr: 0.000075
+Epoch [2/200], Step [1100/2503], Loss: 1.0365, read_time: 1.3336, train_time: 0.2954, lr: 0.000075
+Epoch [2/200], Step [1200/2503], Loss: 1.0375, read_time: 0.9138, train_time: 0.2950, lr: 0.000075
+Epoch [2/200], Step [1300/2503], Loss: 1.0366, read_time: 1.9497, train_time: 0.2960, lr: 0.000075
+Epoch [2/200], Step [1400/2503], Loss: 1.0382, read_time: 2.7472, train_time: 0.2954, lr: 0.000075
+Epoch [2/200], Step [1500/2503], Loss: 1.0384, read_time: 1.2843, train_time: 0.2952, lr: 0.000075
+Epoch [2/200], Step [1600/2503], Loss: 1.0394, read_time: 1.9986, train_time: 0.2962, lr: 0.000075
+Epoch [2/200], Step [1700/2503], Loss: 1.0392, read_time: 1.5791, train_time: 0.2942, lr: 0.000075
+Epoch [2/200], Step [1800/2503], Loss: 1.0394, read_time: 1.3608, train_time: 0.2952, lr: 0.000075
+Epoch [2/200], Step [1900/2503], Loss: 1.0394, read_time: 2.2165, train_time: 0.2961, lr: 0.000075
+Epoch [2/200], Step [2000/2503], Loss: 1.0399, read_time: 1.6126, train_time: 0.2967, lr: 0.000075
+Epoch [2/200], Step [2100/2503], Loss: 1.0410, read_time: 3.2255, train_time: 0.2995, lr: 0.000075
+Epoch [2/200], Step [2200/2503], Loss: 1.0412, read_time: 1.4726, train_time: 0.2975, lr: 0.000075
+Epoch [2/200], Step [2300/2503], Loss: 1.0419, read_time: 3.0561, train_time: 0.2986, lr: 0.000075
+Epoch [2/200], Step [2400/2503], Loss: 1.0425, read_time: 2.1107, train_time: 0.2969, lr: 0.000075
+Epoch [2/200], Step [2500/2503], Loss: 1.0430, read_time: 3.0184, train_time: 0.2965, lr: 0.000075
+Epoch [2/200], avg_Loss: 1.0430, avg_acc: 0.7484
+ImageNet val acc is:0.7126
+Epoch [3/200], Step [100/2503], Loss: 1.0229, read_time: 2.0022, train_time: 0.3027, lr: 0.000075
+Epoch [3/200], Step [200/2503], Loss: 1.0244, read_time: 1.5381, train_time: 0.2943, lr: 0.000075
+Epoch [3/200], Step [300/2503], Loss: 1.0340, read_time: 0.6932, train_time: 0.2948, lr: 0.000075
+Epoch [3/200], Step [400/2503], Loss: 1.0344, read_time: 1.0196, train_time: 0.2968, lr: 0.000075
+Epoch [3/200], Step [500/2503], Loss: 1.0359, read_time: 0.9541, train_time: 0.2955, lr: 0.000075
+Epoch [3/200], Step [600/2503], Loss: 1.0325, read_time: 0.6946, train_time: 0.2959, lr: 0.000075
+Epoch [3/200], Step [700/2503], Loss: 1.0309, read_time: 1.3964, train_time: 0.2963, lr: 0.000075
+Epoch [3/200], Step [800/2503], Loss: 1.0295, read_time: 2.7215, train_time: 0.2944, lr: 0.000075
+Epoch [3/200], Step [900/2503], Loss: 1.0284, read_time: 1.4955, train_time: 0.2939, lr: 0.000075
+Epoch [3/200], Step [1000/2503], Loss: 1.0289, read_time: 1.9252, train_time: 0.2950, lr: 0.000075
+Epoch [3/200], Step [1100/2503], Loss: 1.0295, read_time: 1.5889, train_time: 0.2955, lr: 0.000075
+Epoch [3/200], Step [1200/2503], Loss: 1.0303, read_time: 1.5612, train_time: 0.2974, lr: 0.000075
+Epoch [3/200], Step [1300/2503], Loss: 1.0293, read_time: 2.8657, train_time: 0.2970, lr: 0.000075
+Epoch [3/200], Step [1400/2503], Loss: 1.0315, read_time: 2.5148, train_time: 0.2950, lr: 0.000075
+Epoch [3/200], Step [1500/2503], Loss: 1.0317, read_time: 2.2850, train_time: 0.2949, lr: 0.000075
+Epoch [3/200], Step [1600/2503], Loss: 1.0320, read_time: 0.9912, train_time: 0.2946, lr: 0.000075
+Epoch [3/200], Step [1700/2503], Loss: 1.0320, read_time: 2.7374, train_time: 0.2942, lr: 0.000075
+Epoch [3/200], Step [1800/2503], Loss: 1.0314, read_time: 1.6912, train_time: 0.2941, lr: 0.000075
+Epoch [3/200], Step [1900/2503], Loss: 1.0312, read_time: 2.0113, train_time: 0.2941, lr: 0.000075
+Epoch [3/200], Step [2000/2503], Loss: 1.0313, read_time: 1.9308, train_time: 0.2943, lr: 0.000075
+Epoch [3/200], Step [2100/2503], Loss: 1.0322, read_time: 3.0873, train_time: 0.2946, lr: 0.000075
+Epoch [3/200], Step [2200/2503], Loss: 1.0324, read_time: 1.8364, train_time: 0.2940, lr: 0.000075
+Epoch [3/200], Step [2300/2503], Loss: 1.0329, read_time: 1.0777, train_time: 0.2945, lr: 0.000075
+Epoch [3/200], Step [2400/2503], Loss: 1.0321, read_time: 1.2715, train_time: 0.2954, lr: 0.000075
+Epoch [3/200], Step [2500/2503], Loss: 1.0324, read_time: 1.7799, train_time: 0.2960, lr: 0.000075
+Epoch [3/200], avg_Loss: 1.0323, avg_acc: 0.7512
+ImageNet val acc is:0.7117
+Epoch [4/200], Step [100/2503], Loss: 1.0111, read_time: 0.4392, train_time: 0.3014, lr: 0.000075
+Epoch [4/200], Step [200/2503], Loss: 1.0140, read_time: 0.3505, train_time: 0.2954, lr: 0.000075
+Epoch [4/200], Step [300/2503], Loss: 1.0214, read_time: 0.6607, train_time: 0.2954, lr: 0.000075
+Epoch [4/200], Step [400/2503], Loss: 1.0170, read_time: 1.1750, train_time: 0.2953, lr: 0.000075
+Epoch [4/200], Step [500/2503], Loss: 1.0172, read_time: 1.3040, train_time: 0.2956, lr: 0.000075
+Epoch [4/200], Step [600/2503], Loss: 1.0151, read_time: 1.3144, train_time: 0.2958, lr: 0.000075
+Epoch [4/200], Step [700/2503], Loss: 1.0190, read_time: 0.6165, train_time: 0.2948, lr: 0.000075
+Epoch [4/200], Step [800/2503], Loss: 1.0182, read_time: 0.8150, train_time: 0.2959, lr: 0.000075
+Epoch [4/200], Step [900/2503], Loss: 1.0194, read_time: 0.7250, train_time: 0.2956, lr: 0.000075
+Epoch [4/200], Step [1000/2503], Loss: 1.0223, read_time: 1.2319, train_time: 0.2959, lr: 0.000075
+Epoch [4/200], Step [1100/2503], Loss: 1.0239, read_time: 0.8703, train_time: 0.2953, lr: 0.000075
+Epoch [4/200], Step [1200/2503], Loss: 1.0228, read_time: 0.3341, train_time: 0.2947, lr: 0.000075
+Epoch [4/200], Step [1300/2503], Loss: 1.0231, read_time: 0.6930, train_time: 0.2953, lr: 0.000075
+Epoch [4/200], Step [1400/2503], Loss: 1.0240, read_time: 0.8158, train_time: 0.2945, lr: 0.000075
+Epoch [4/200], Step [1500/2503], Loss: 1.0246, read_time: 1.5920, train_time: 0.2969, lr: 0.000075
+Epoch [4/200], Step [1600/2503], Loss: 1.0236, read_time: 2.5855, train_time: 0.2968, lr: 0.000075
+Epoch [4/200], Step [1700/2503], Loss: 1.0235, read_time: 1.9710, train_time: 0.2962, lr: 0.000075
+Epoch [4/200], Step [1800/2503], Loss: 1.0239, read_time: 2.1294, train_time: 0.2972, lr: 0.000075
+Epoch [4/200], Step [1900/2503], Loss: 1.0253, read_time: 1.8551, train_time: 0.2973, lr: 0.000075
+Epoch [4/200], Step [2000/2503], Loss: 1.0264, read_time: 2.0107, train_time: 0.2984, lr: 0.000075
+Epoch [4/200], Step [2100/2503], Loss: 1.0272, read_time: 3.1478, train_time: 0.2978, lr: 0.000075
+Epoch [4/200], Step [2200/2503], Loss: 1.0278, read_time: 1.8250, train_time: 0.2973, lr: 0.000075
+Epoch [4/200], Step [2300/2503], Loss: 1.0287, read_time: 2.0620, train_time: 0.2966, lr: 0.000075
+Epoch [4/200], Step [2400/2503], Loss: 1.0291, read_time: 1.1374, train_time: 0.2957, lr: 0.000075
+Epoch [4/200], Step [2500/2503], Loss: 1.0294, read_time: 0.7983, train_time: 0.2963, lr: 0.000075
+Epoch [4/200], avg_Loss: 1.0295, avg_acc: 0.7505
+ImageNet val acc is:0.7139
+Epoch [5/200], Step [100/2503], Loss: 1.0193, read_time: 0.7639, train_time: 0.3019, lr: 0.000075
+Epoch [5/200], Step [200/2503], Loss: 1.0228, read_time: 0.4554, train_time: 0.2968, lr: 0.000075
+Epoch [5/200], Step [300/2503], Loss: 1.0247, read_time: 0.5315, train_time: 0.2962, lr: 0.000075
+Epoch [5/200], Step [400/2503], Loss: 1.0232, read_time: 1.6842, train_time: 0.2965, lr: 0.000075
+Epoch [5/200], Step [500/2503], Loss: 1.0239, read_time: 2.4849, train_time: 0.2962, lr: 0.000075
+Epoch [5/200], Step [600/2503], Loss: 1.0259, read_time: 2.2018, train_time: 0.2958, lr: 0.000075
+Epoch [5/200], Step [700/2503], Loss: 1.0256, read_time: 0.7728, train_time: 0.2945, lr: 0.000075
+Epoch [5/200], Step [800/2503], Loss: 1.0257, read_time: 0.4748, train_time: 0.2956, lr: 0.000075
+Epoch [5/200], Step [900/2503], Loss: 1.0252, read_time: 1.1346, train_time: 0.2964, lr: 0.000075
+Epoch [5/200], Step [1000/2503], Loss: 1.0262, read_time: 0.3865, train_time: 0.2937, lr: 0.000075
+Epoch [5/200], Step [1100/2503], Loss: 1.0251, read_time: 0.0747, train_time: 0.2946, lr: 0.000075
+Epoch [5/200], Step [1200/2503], Loss: 1.0255, read_time: 0.0396, train_time: 0.2944, lr: 0.000075
+Epoch [5/200], Step [1300/2503], Loss: 1.0254, read_time: 0.2002, train_time: 0.2949, lr: 0.000075
+Epoch [5/200], Step [1400/2503], Loss: 1.0267, read_time: 0.2227, train_time: 0.2957, lr: 0.000075
+Epoch [5/200], Step [1500/2503], Loss: 1.0280, read_time: 0.0892, train_time: 0.2947, lr: 0.000075
 /usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
   warnings.warn(str(msg))
-Epoch [4/200], Step [3000/5005], Loss: 0.9716, read_time: 0.4938, train_time: 0.1228, lr: 0.000005
-Epoch [4/200], Step [4000/5005], Loss: 0.9720, read_time: 0.9406, train_time: 0.1232, lr: 0.000005
-Epoch [4/200], Step [5000/5005], Loss: 0.9719, read_time: 0.9801, train_time: 0.1233, lr: 0.000005
-Epoch [4/200], avg_Loss: 0.9719, avg_acc: 0.7651
-ImageNet val acc is:0.7168
-model saved!
-
-Epoch [5/200], Step [1000/5005], Loss: 0.9712, read_time: 0.6152, train_time: 0.1233, lr: 0.000005
-Epoch [5/200], Step [2000/5005], Loss: 0.9741, read_time: 0.4331, train_time: 0.1229, lr: 0.000005
-Epoch [5/200], Step [3000/5005], Loss: 0.9749, read_time: 0.0083, train_time: 0.1219, lr: 0.000005
-Epoch [5/200], Step [4000/5005], Loss: 0.9739, read_time: 0.0045, train_time: 0.1218, lr: 0.000005
-Epoch [5/200], Step [5000/5005], Loss: 0.9729, read_time: 0.0502, train_time: 0.1219, lr: 0.000005
-Epoch [5/200], avg_Loss: 0.9728, avg_acc: 0.7652
-ImageNet val acc is:0.7162
-model saved!
-
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [6/200], Step [1000/5005], Loss: 0.9688, read_time: 0.5305, train_time: 0.1235, lr: 0.000005
-Epoch [6/200], Step [2000/5005], Loss: 0.9659, read_time: 0.0493, train_time: 0.1221, lr: 0.000005
-Epoch [6/200], Step [3000/5005], Loss: 0.9700, read_time: 0.0266, train_time: 0.1220, lr: 0.000005
-Epoch [6/200], Step [4000/5005], Loss: 0.9679, read_time: 0.2970, train_time: 0.1232, lr: 0.000005
-Epoch [6/200], Step [5000/5005], Loss: 0.9694, read_time: 0.3401, train_time: 0.1232, lr: 0.000005
-Epoch [6/200], avg_Loss: 0.9694, avg_acc: 0.7658
-ImageNet val acc is:0.7170
-model saved!
-
-Epoch [7/200], Step [1000/5005], Loss: 0.9679, read_time: 0.4528, train_time: 0.1236, lr: 0.000005
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [7/200], Step [2000/5005], Loss: 0.9667, read_time: 0.4518, train_time: 0.1227, lr: 0.000005
-Epoch [7/200], Step [3000/5005], Loss: 0.9684, read_time: 0.5045, train_time: 0.1228, lr: 0.000005
-Epoch [7/200], Step [4000/5005], Loss: 0.9692, read_time: 0.4540, train_time: 0.1228, lr: 0.000005
-Epoch [7/200], Step [5000/5005], Loss: 0.9696, read_time: 0.3270, train_time: 0.1230, lr: 0.000005
-Epoch [7/200], avg_Loss: 0.9695, avg_acc: 0.7667
-ImageNet val acc is:0.7168
-model saved!
-
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [8/200], Step [1000/5005], Loss: 0.9653, read_time: 0.3088, train_time: 0.1232, lr: 0.000005
-Epoch [8/200], Step [2000/5005], Loss: 0.9719, read_time: 0.3780, train_time: 0.1230, lr: 0.000005
-Epoch [8/200], Step [3000/5005], Loss: 0.9677, read_time: 0.5000, train_time: 0.1228, lr: 0.000005
-Epoch [8/200], Step [4000/5005], Loss: 0.9672, read_time: 0.2852, train_time: 0.1229, lr: 0.000005
-Epoch [8/200], Step [5000/5005], Loss: 0.9684, read_time: 0.3687, train_time: 0.1229, lr: 0.000005
-Epoch [8/200], avg_Loss: 0.9684, avg_acc: 0.7663
-ImageNet val acc is:0.7165
-model saved!
-
-Epoch [9/200], Step [1000/5005], Loss: 0.9702, read_time: 0.4027, train_time: 0.1237, lr: 0.000005
-Epoch [9/200], Step [2000/5005], Loss: 0.9726, read_time: 0.5080, train_time: 0.1230, lr: 0.000005
-Epoch [9/200], Step [3000/5005], Loss: 0.9728, read_time: 0.5131, train_time: 0.1232, lr: 0.000005
-Epoch [9/200], Step [4000/5005], Loss: 0.9710, read_time: 0.9024, train_time: 0.1237, lr: 0.000005
-Epoch [9/200], Step [5000/5005], Loss: 0.9705, read_time: 0.5745, train_time: 0.1238, lr: 0.000005
-Epoch [9/200], avg_Loss: 0.9704, avg_acc: 0.7662
-ImageNet val acc is:0.7165
-model saved!
-
-Epoch [10/200], Step [1000/5005], Loss: 0.9539, read_time: 0.5631, train_time: 0.1236, lr: 0.000005
-Epoch [10/200], Step [2000/5005], Loss: 0.9653, read_time: 0.6141, train_time: 0.1234, lr: 0.000005
-Epoch [10/200], Step [3000/5005], Loss: 0.9647, read_time: 0.5770, train_time: 0.1238, lr: 0.000005
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [10/200], Step [4000/5005], Loss: 0.9653, read_time: 0.3909, train_time: 0.1235, lr: 0.000005
-Epoch [10/200], Step [5000/5005], Loss: 0.9647, read_time: 0.1438, train_time: 0.1232, lr: 0.000005
-Epoch [10/200], avg_Loss: 0.9647, avg_acc: 0.7670
-ImageNet val acc is:0.7172
-model saved!
-
-Epoch [11/200], Step [1000/5005], Loss: 0.9624, read_time: 0.1988, train_time: 0.1237, lr: 0.000005
-Epoch [11/200], Step [2000/5005], Loss: 0.9656, read_time: 0.2618, train_time: 0.1228, lr: 0.000005
-Epoch [11/200], Step [3000/5005], Loss: 0.9664, read_time: 0.1602, train_time: 0.1231, lr: 0.000005
-Epoch [11/200], Step [4000/5005], Loss: 0.9658, read_time: 0.4627, train_time: 0.1234, lr: 0.000005
-Epoch [11/200], Step [5000/5005], Loss: 0.9663, read_time: 0.3766, train_time: 0.1232, lr: 0.000005
-Epoch [11/200], avg_Loss: 0.9664, avg_acc: 0.7667
-ImageNet val acc is:0.7166
-model saved!
-
-Epoch [12/200], Step [1000/5005], Loss: 0.9663, read_time: 0.3426, train_time: 0.1237, lr: 0.000005
-Epoch [12/200], Step [2000/5005], Loss: 0.9640, read_time: 0.3095, train_time: 0.1233, lr: 0.000005
-Epoch [12/200], Step [3000/5005], Loss: 0.9651, read_time: 0.3799, train_time: 0.1232, lr: 0.000005
-Epoch [12/200], Step [4000/5005], Loss: 0.9664, read_time: 0.6210, train_time: 0.1230, lr: 0.000005
-Epoch [12/200], Step [5000/5005], Loss: 0.9665, read_time: 0.3039, train_time: 0.1234, lr: 0.000005
-Epoch [12/200], avg_Loss: 0.9664, avg_acc: 0.7664
-ImageNet val acc is:0.7167
-model saved!
-
-Epoch [13/200], Step [1000/5005], Loss: 0.9682, read_time: 0.3022, train_time: 0.1239, lr: 0.000005
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [13/200], Step [2000/5005], Loss: 0.9656, read_time: 0.1730, train_time: 0.1228, lr: 0.000005
-Epoch [13/200], Step [3000/5005], Loss: 0.9689, read_time: 0.1060, train_time: 0.1228, lr: 0.000005
-Epoch [13/200], Step [4000/5005], Loss: 0.9688, read_time: 0.0086, train_time: 0.1226, lr: 0.000005
-Epoch [13/200], Step [5000/5005], Loss: 0.9695, read_time: 0.0258, train_time: 0.1227, lr: 0.000005
-Epoch [13/200], avg_Loss: 0.9695, avg_acc: 0.7664
-ImageNet val acc is:0.7167
-model saved!
-
-Epoch [14/200], Step [1000/5005], Loss: 0.9632, read_time: 0.0967, train_time: 0.1234, lr: 0.000005
-Epoch [14/200], Step [2000/5005], Loss: 0.9685, read_time: 0.1326, train_time: 0.1229, lr: 0.000005
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [14/200], Step [3000/5005], Loss: 0.9694, read_time: 0.1118, train_time: 0.1227, lr: 0.000005
-Epoch [14/200], Step [4000/5005], Loss: 0.9677, read_time: 0.0455, train_time: 0.1225, lr: 0.000005
-Epoch [14/200], Step [5000/5005], Loss: 0.9660, read_time: 0.1141, train_time: 0.1229, lr: 0.000005
-Epoch [14/200], avg_Loss: 0.9661, avg_acc: 0.7665
-ImageNet val acc is:0.7175
-avg_acc: 0.7175 model saved!
-model saved!
-
-Epoch [15/200], Step [1000/5005], Loss: 0.9647, read_time: 0.0594, train_time: 0.1230, lr: 0.000005
-Epoch [15/200], Step [2000/5005], Loss: 0.9665, read_time: 0.0998, train_time: 0.1225, lr: 0.000005
-Epoch [15/200], Step [3000/5005], Loss: 0.9635, read_time: 0.1097, train_time: 0.1224, lr: 0.000005
-Epoch [15/200], Step [4000/5005], Loss: 0.9643, read_time: 0.0134, train_time: 0.1225, lr: 0.000005
-Epoch [15/200], Step [5000/5005], Loss: 0.9663, read_time: 0.0374, train_time: 0.1232, lr: 0.000005
-Epoch [15/200], avg_Loss: 0.9663, avg_acc: 0.7669
-ImageNet val acc is:0.7169
-model saved!
-
-Epoch [16/200], Step [1000/5005], Loss: 0.9645, read_time: 0.0749, train_time: 0.1232, lr: 0.000005
-Epoch [16/200], Step [2000/5005], Loss: 0.9623, read_time: 0.0978, train_time: 0.1227, lr: 0.000005
-Epoch [16/200], Step [3000/5005], Loss: 0.9623, read_time: 0.0793, train_time: 0.1227, lr: 0.000005
-Epoch [16/200], Step [4000/5005], Loss: 0.9649, read_time: 0.0195, train_time: 0.1226, lr: 0.000005
-Epoch [16/200], Step [5000/5005], Loss: 0.9657, read_time: 0.1087, train_time: 0.1229, lr: 0.000005
-Epoch [16/200], avg_Loss: 0.9658, avg_acc: 0.7661
-ImageNet val acc is:0.7165
-model saved!
-
-Epoch [17/200], Step [1000/5005], Loss: 0.9643, read_time: 0.0714, train_time: 0.1230, lr: 0.000005
-Epoch [17/200], Step [2000/5005], Loss: 0.9672, read_time: 0.0917, train_time: 0.1227, lr: 0.000005
-Epoch [17/200], Step [3000/5005], Loss: 0.9650, read_time: 0.1071, train_time: 0.1231, lr: 0.000005
-Epoch [17/200], Step [4000/5005], Loss: 0.9657, read_time: 0.0299, train_time: 0.1229, lr: 0.000005
-Epoch [17/200], Step [5000/5005], Loss: 0.9645, read_time: 0.0114, train_time: 0.1228, lr: 0.000005
-Epoch [17/200], avg_Loss: 0.9645, avg_acc: 0.7672
-ImageNet val acc is:0.7167
-model saved!
-
-Epoch [18/200], Step [1000/5005], Loss: 0.9667, read_time: 0.0455, train_time: 0.1231, lr: 0.000005
-Epoch [18/200], Step [2000/5005], Loss: 0.9616, read_time: 0.0175, train_time: 0.1224, lr: 0.000005
-Epoch [18/200], Step [3000/5005], Loss: 0.9642, read_time: 0.0987, train_time: 0.1228, lr: 0.000005
-Epoch [18/200], Step [4000/5005], Loss: 0.9628, read_time: 0.0898, train_time: 0.1228, lr: 0.000005
-Epoch [18/200], Step [5000/5005], Loss: 0.9638, read_time: 0.0940, train_time: 0.1228, lr: 0.000005
-Epoch [18/200], avg_Loss: 0.9638, avg_acc: 0.7673
-ImageNet val acc is:0.7170
-model saved!
-
-Epoch [19/200], Step [1000/5005], Loss: 0.9710, read_time: 0.0747, train_time: 0.1231, lr: 0.000005
-Epoch [19/200], Step [2000/5005], Loss: 0.9616, read_time: 0.0770, train_time: 0.1233, lr: 0.000005
-Epoch [19/200], Step [3000/5005], Loss: 0.9612, read_time: 0.0718, train_time: 0.1231, lr: 0.000005
-/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
-  warnings.warn(str(msg))
-Epoch [19/200], Step [4000/5005], Loss: 0.9628, read_time: 0.0045, train_time: 0.1228, lr: 0.000005
-Epoch [19/200], Step [5000/5005], Loss: 0.9639, read_time: 0.0447, train_time: 0.1227, lr: 0.000005
-Epoch [19/200], avg_Loss: 0.9639, avg_acc: 0.7678
+Epoch [5/200], Step [1600/2503], Loss: 1.0283, read_time: 0.0122, train_time: 0.2943, lr: 0.000075
+Epoch [5/200], Step [1700/2503], Loss: 1.0276, read_time: 0.0064, train_time: 0.2936, lr: 0.000075
+Epoch [5/200], Step [1800/2503], Loss: 1.0276, read_time: 0.0188, train_time: 0.2937, lr: 0.000075
+Epoch [5/200], Step [1900/2503], Loss: 1.0278, read_time: 0.0151, train_time: 0.2938, lr: 0.000075
+Epoch [5/200], Step [2000/2503], Loss: 1.0278, read_time: 0.0078, train_time: 0.2933, lr: 0.000075
+Epoch [5/200], Step [2100/2503], Loss: 1.0277, read_time: 0.0063, train_time: 0.2933, lr: 0.000075
+Epoch [5/200], Step [2200/2503], Loss: 1.0283, read_time: 0.0093, train_time: 0.2937, lr: 0.000075
+Epoch [5/200], Step [2300/2503], Loss: 1.0295, read_time: 0.0591, train_time: 0.2940, lr: 0.000075
+Epoch [5/200], Step [2400/2503], Loss: 1.0302, read_time: 0.1054, train_time: 0.2951, lr: 0.000075
+Epoch [5/200], Step [2500/2503], Loss: 1.0302, read_time: 0.0568, train_time: 0.2947, lr: 0.000075
+Epoch [5/200], avg_Loss: 1.0301, avg_acc: 0.7509
+ImageNet val acc is:0.7123
+Epoch [6/200], Step [100/2503], Loss: 1.0189, read_time: 2.0149, train_time: 0.3043, lr: 0.000075
+Epoch [6/200], Step [200/2503], Loss: 1.0141, read_time: 1.1582, train_time: 0.2956, lr: 0.000075
+Epoch [6/200], Step [300/2503], Loss: 1.0131, read_time: 0.3169, train_time: 0.2952, lr: 0.000075
+Epoch [6/200], Step [400/2503], Loss: 1.0105, read_time: 0.7109, train_time: 0.2953, lr: 0.000075
+Epoch [6/200], Step [500/2503], Loss: 1.0140, read_time: 0.4365, train_time: 0.2946, lr: 0.000075
+Epoch [6/200], Step [600/2503], Loss: 1.0123, read_time: 0.8162, train_time: 0.2954, lr: 0.000075
+Epoch [6/200], Step [700/2503], Loss: 1.0160, read_time: 0.3722, train_time: 0.2956, lr: 0.000075
+Epoch [6/200], Step [800/2503], Loss: 1.0141, read_time: 0.1144, train_time: 0.2948, lr: 0.000075
+Epoch [6/200], Step [900/2503], Loss: 1.0143, read_time: 0.0088, train_time: 0.2940, lr: 0.000075
+Epoch [6/200], Step [1000/2503], Loss: 1.0137, read_time: 0.0072, train_time: 0.2941, lr: 0.000075
+Epoch [6/200], Step [1100/2503], Loss: 1.0149, read_time: 0.0416, train_time: 0.2936, lr: 0.000075
+Epoch [6/200], Step [1200/2503], Loss: 1.0148, read_time: 0.1749, train_time: 0.2954, lr: 0.000075
+Epoch [6/200], Step [1300/2503], Loss: 1.0168, read_time: 0.1556, train_time: 0.2949, lr: 0.000075
+Epoch [6/200], Step [1400/2503], Loss: 1.0185, read_time: 0.1834, train_time: 0.2951, lr: 0.000075
+Epoch [6/200], Step [1500/2503], Loss: 1.0190, read_time: 0.0599, train_time: 0.2952, lr: 0.000075
+Epoch [6/200], Step [1600/2503], Loss: 1.0209, read_time: 0.0899, train_time: 0.2949, lr: 0.000075
+Epoch [6/200], Step [1700/2503], Loss: 1.0212, read_time: 0.0276, train_time: 0.2950, lr: 0.000075
+Epoch [6/200], Step [1800/2503], Loss: 1.0222, read_time: 0.0089, train_time: 0.2937, lr: 0.000075
+Epoch [6/200], Step [1900/2503], Loss: 1.0216, read_time: 0.0950, train_time: 0.2951, lr: 0.000075
+Epoch [6/200], Step [2000/2503], Loss: 1.0217, read_time: 0.0903, train_time: 0.2940, lr: 0.000075
+Epoch [6/200], Step [2100/2503], Loss: 1.0213, read_time: 0.0624, train_time: 0.2950, lr: 0.000075
+Epoch [6/200], Step [2200/2503], Loss: 1.0220, read_time: 0.4094, train_time: 0.2953, lr: 0.000075
+Epoch [6/200], Step [2300/2503], Loss: 1.0231, read_time: 0.4093, train_time: 0.2952, lr: 0.000075
+Epoch [6/200], Step [2400/2503], Loss: 1.0235, read_time: 0.5157, train_time: 0.2961, lr: 0.000075
+Epoch [6/200], Step [2500/2503], Loss: 1.0240, read_time: 0.5457, train_time: 0.2961, lr: 0.000075
+Epoch [6/200], avg_Loss: 1.0239, avg_acc: 0.7520
 ImageNet val acc is:0.7158
+avg_acc: 0.7158 model saved!
 model saved!
-
-Epoch [20/200], Step [1000/5005], Loss: 0.9613, read_time: 0.0861, train_time: 0.1230, lr: 0.000005
-

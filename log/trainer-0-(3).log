@@ -1,0 +1,215 @@
+/usr/local/lib/python3.6/dist-packages/setuptools/depends.py:2: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module's documentation for alternative uses
+  import imp
+I1212 07:36:11.125330 22686 gen_comm_id_helper.cc:190] Server listening on: 127.0.0.1:48515 successful.
+I1212 07:36:14.081866 22686 nccl_context.cc:74] init nccl context nranks: 2 local rank: 1 gpu id: 1 ring id: 0
+W1212 07:36:14.939237 22686 device_context.cc:447] Please NOTE: device: 1, GPU Compute Capability: 7.5, Driver API Version: 11.0, Runtime API Version: 10.2
+W1212 07:36:14.944120 22686 device_context.cc:465] device: 1, cuDNN Version: 7.6.
+----- Imagenet2012 image train list len = 1281167
+----- Imagenet2012 image val list len = 50000
+Epoch [0/200], Step [1000/5005], Loss: 0.9977, read_time: 0.2675, train_time: 0.1225, lr: 0.000025
+Epoch [0/200], Step [2000/5005], Loss: 1.0003, read_time: 0.1375, train_time: 0.1217, lr: 0.000025
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [0/200], Step [3000/5005], Loss: 0.9968, read_time: 0.1025, train_time: 0.1222, lr: 0.000025
+Epoch [0/200], Step [4000/5005], Loss: 0.9969, read_time: 0.5260, train_time: 0.1230, lr: 0.000025
+Epoch [0/200], Step [5000/5005], Loss: 0.9961, read_time: 0.6021, train_time: 0.1228, lr: 0.000025
+Epoch [0/200], avg_Loss: 0.9961, avg_acc: 0.7594
+ImageNet val acc is:0.7153
+lr update-1!
+Epoch [1/200], Step [1000/5005], Loss: 0.9909, read_time: 0.5023, train_time: 0.1231, lr: 0.000015
+Epoch [1/200], Step [2000/5005], Loss: 0.9870, read_time: 0.7861, train_time: 0.1230, lr: 0.000015
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [1/200], Step [3000/5005], Loss: 0.9876, read_time: 0.6701, train_time: 0.1233, lr: 0.000015
+Epoch [1/200], Step [4000/5005], Loss: 0.9884, read_time: 1.2814, train_time: 0.1234, lr: 0.000015
+Epoch [1/200], Step [5000/5005], Loss: 0.9875, read_time: 0.7207, train_time: 0.1234, lr: 0.000015
+Epoch [1/200], avg_Loss: 0.9874, avg_acc: 0.7618
+ImageNet val acc is:0.7157
+model saved!
+
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [2/200], Step [1000/5005], Loss: 0.9872, read_time: 0.7694, train_time: 0.1233, lr: 0.000015
+Epoch [2/200], Step [2000/5005], Loss: 0.9841, read_time: 0.8814, train_time: 0.1225, lr: 0.000015
+Epoch [2/200], Step [3000/5005], Loss: 0.9830, read_time: 0.6152, train_time: 0.1224, lr: 0.000015
+Epoch [2/200], Step [4000/5005], Loss: 0.9826, read_time: 0.8545, train_time: 0.1226, lr: 0.000015
+Epoch [2/200], Step [5000/5005], Loss: 0.9830, read_time: 1.0931, train_time: 0.1236, lr: 0.000015
+Epoch [2/200], avg_Loss: 0.9830, avg_acc: 0.7624
+ImageNet val acc is:0.7165
+avg_acc: 0.7165 model saved!
+model saved!
+
+lr update-2!
+Epoch [3/200], Step [1000/5005], Loss: 0.9855, read_time: 0.8289, train_time: 0.1236, lr: 0.000005
+Epoch [3/200], Step [2000/5005], Loss: 0.9782, read_time: 0.8271, train_time: 0.1230, lr: 0.000005
+Epoch [3/200], Step [3000/5005], Loss: 0.9774, read_time: 0.8935, train_time: 0.1225, lr: 0.000005
+Epoch [3/200], Step [4000/5005], Loss: 0.9776, read_time: 0.8102, train_time: 0.1230, lr: 0.000005
+Epoch [3/200], Step [5000/5005], Loss: 0.9783, read_time: 0.6098, train_time: 0.1228, lr: 0.000005
+Epoch [3/200], avg_Loss: 0.9783, avg_acc: 0.7641
+ImageNet val acc is:0.7172
+avg_acc: 0.7172 model saved!
+model saved!
+
+Epoch [4/200], Step [1000/5005], Loss: 0.9701, read_time: 0.3574, train_time: 0.1232, lr: 0.000005
+Epoch [4/200], Step [2000/5005], Loss: 0.9708, read_time: 0.5852, train_time: 0.1227, lr: 0.000005
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [4/200], Step [3000/5005], Loss: 0.9716, read_time: 0.4938, train_time: 0.1228, lr: 0.000005
+Epoch [4/200], Step [4000/5005], Loss: 0.9720, read_time: 0.9406, train_time: 0.1232, lr: 0.000005
+Epoch [4/200], Step [5000/5005], Loss: 0.9719, read_time: 0.9801, train_time: 0.1233, lr: 0.000005
+Epoch [4/200], avg_Loss: 0.9719, avg_acc: 0.7651
+ImageNet val acc is:0.7168
+model saved!
+
+Epoch [5/200], Step [1000/5005], Loss: 0.9712, read_time: 0.6152, train_time: 0.1233, lr: 0.000005
+Epoch [5/200], Step [2000/5005], Loss: 0.9741, read_time: 0.4331, train_time: 0.1229, lr: 0.000005
+Epoch [5/200], Step [3000/5005], Loss: 0.9749, read_time: 0.0083, train_time: 0.1219, lr: 0.000005
+Epoch [5/200], Step [4000/5005], Loss: 0.9739, read_time: 0.0045, train_time: 0.1218, lr: 0.000005
+Epoch [5/200], Step [5000/5005], Loss: 0.9729, read_time: 0.0502, train_time: 0.1219, lr: 0.000005
+Epoch [5/200], avg_Loss: 0.9728, avg_acc: 0.7652
+ImageNet val acc is:0.7162
+model saved!
+
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [6/200], Step [1000/5005], Loss: 0.9688, read_time: 0.5305, train_time: 0.1235, lr: 0.000005
+Epoch [6/200], Step [2000/5005], Loss: 0.9659, read_time: 0.0493, train_time: 0.1221, lr: 0.000005
+Epoch [6/200], Step [3000/5005], Loss: 0.9700, read_time: 0.0266, train_time: 0.1220, lr: 0.000005
+Epoch [6/200], Step [4000/5005], Loss: 0.9679, read_time: 0.2970, train_time: 0.1232, lr: 0.000005
+Epoch [6/200], Step [5000/5005], Loss: 0.9694, read_time: 0.3401, train_time: 0.1232, lr: 0.000005
+Epoch [6/200], avg_Loss: 0.9694, avg_acc: 0.7658
+ImageNet val acc is:0.7170
+model saved!
+
+Epoch [7/200], Step [1000/5005], Loss: 0.9679, read_time: 0.4528, train_time: 0.1236, lr: 0.000005
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [7/200], Step [2000/5005], Loss: 0.9667, read_time: 0.4518, train_time: 0.1227, lr: 0.000005
+Epoch [7/200], Step [3000/5005], Loss: 0.9684, read_time: 0.5045, train_time: 0.1228, lr: 0.000005
+Epoch [7/200], Step [4000/5005], Loss: 0.9692, read_time: 0.4540, train_time: 0.1228, lr: 0.000005
+Epoch [7/200], Step [5000/5005], Loss: 0.9696, read_time: 0.3270, train_time: 0.1230, lr: 0.000005
+Epoch [7/200], avg_Loss: 0.9695, avg_acc: 0.7667
+ImageNet val acc is:0.7168
+model saved!
+
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [8/200], Step [1000/5005], Loss: 0.9653, read_time: 0.3088, train_time: 0.1232, lr: 0.000005
+Epoch [8/200], Step [2000/5005], Loss: 0.9719, read_time: 0.3780, train_time: 0.1230, lr: 0.000005
+Epoch [8/200], Step [3000/5005], Loss: 0.9677, read_time: 0.5000, train_time: 0.1228, lr: 0.000005
+Epoch [8/200], Step [4000/5005], Loss: 0.9672, read_time: 0.2852, train_time: 0.1229, lr: 0.000005
+Epoch [8/200], Step [5000/5005], Loss: 0.9684, read_time: 0.3687, train_time: 0.1229, lr: 0.000005
+Epoch [8/200], avg_Loss: 0.9684, avg_acc: 0.7663
+ImageNet val acc is:0.7165
+model saved!
+
+Epoch [9/200], Step [1000/5005], Loss: 0.9702, read_time: 0.4027, train_time: 0.1237, lr: 0.000005
+Epoch [9/200], Step [2000/5005], Loss: 0.9726, read_time: 0.5080, train_time: 0.1230, lr: 0.000005
+Epoch [9/200], Step [3000/5005], Loss: 0.9728, read_time: 0.5131, train_time: 0.1232, lr: 0.000005
+Epoch [9/200], Step [4000/5005], Loss: 0.9710, read_time: 0.9024, train_time: 0.1237, lr: 0.000005
+Epoch [9/200], Step [5000/5005], Loss: 0.9705, read_time: 0.5745, train_time: 0.1238, lr: 0.000005
+Epoch [9/200], avg_Loss: 0.9704, avg_acc: 0.7662
+ImageNet val acc is:0.7165
+model saved!
+
+Epoch [10/200], Step [1000/5005], Loss: 0.9539, read_time: 0.5631, train_time: 0.1236, lr: 0.000005
+Epoch [10/200], Step [2000/5005], Loss: 0.9653, read_time: 0.6141, train_time: 0.1234, lr: 0.000005
+Epoch [10/200], Step [3000/5005], Loss: 0.9647, read_time: 0.5770, train_time: 0.1238, lr: 0.000005
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [10/200], Step [4000/5005], Loss: 0.9653, read_time: 0.3909, train_time: 0.1235, lr: 0.000005
+Epoch [10/200], Step [5000/5005], Loss: 0.9647, read_time: 0.1438, train_time: 0.1232, lr: 0.000005
+Epoch [10/200], avg_Loss: 0.9647, avg_acc: 0.7670
+ImageNet val acc is:0.7172
+model saved!
+
+Epoch [11/200], Step [1000/5005], Loss: 0.9624, read_time: 0.1988, train_time: 0.1237, lr: 0.000005
+Epoch [11/200], Step [2000/5005], Loss: 0.9656, read_time: 0.2618, train_time: 0.1228, lr: 0.000005
+Epoch [11/200], Step [3000/5005], Loss: 0.9664, read_time: 0.1602, train_time: 0.1231, lr: 0.000005
+Epoch [11/200], Step [4000/5005], Loss: 0.9658, read_time: 0.4627, train_time: 0.1234, lr: 0.000005
+Epoch [11/200], Step [5000/5005], Loss: 0.9663, read_time: 0.3766, train_time: 0.1232, lr: 0.000005
+Epoch [11/200], avg_Loss: 0.9664, avg_acc: 0.7667
+ImageNet val acc is:0.7166
+model saved!
+
+Epoch [12/200], Step [1000/5005], Loss: 0.9663, read_time: 0.3426, train_time: 0.1237, lr: 0.000005
+Epoch [12/200], Step [2000/5005], Loss: 0.9640, read_time: 0.3095, train_time: 0.1233, lr: 0.000005
+Epoch [12/200], Step [3000/5005], Loss: 0.9651, read_time: 0.3799, train_time: 0.1232, lr: 0.000005
+Epoch [12/200], Step [4000/5005], Loss: 0.9664, read_time: 0.6210, train_time: 0.1230, lr: 0.000005
+Epoch [12/200], Step [5000/5005], Loss: 0.9665, read_time: 0.3039, train_time: 0.1234, lr: 0.000005
+Epoch [12/200], avg_Loss: 0.9664, avg_acc: 0.7664
+ImageNet val acc is:0.7167
+model saved!
+
+Epoch [13/200], Step [1000/5005], Loss: 0.9682, read_time: 0.3022, train_time: 0.1239, lr: 0.000005
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [13/200], Step [2000/5005], Loss: 0.9656, read_time: 0.1730, train_time: 0.1228, lr: 0.000005
+Epoch [13/200], Step [3000/5005], Loss: 0.9689, read_time: 0.1060, train_time: 0.1228, lr: 0.000005
+Epoch [13/200], Step [4000/5005], Loss: 0.9688, read_time: 0.0086, train_time: 0.1226, lr: 0.000005
+Epoch [13/200], Step [5000/5005], Loss: 0.9695, read_time: 0.0258, train_time: 0.1227, lr: 0.000005
+Epoch [13/200], avg_Loss: 0.9695, avg_acc: 0.7664
+ImageNet val acc is:0.7167
+model saved!
+
+Epoch [14/200], Step [1000/5005], Loss: 0.9632, read_time: 0.0967, train_time: 0.1234, lr: 0.000005
+Epoch [14/200], Step [2000/5005], Loss: 0.9685, read_time: 0.1326, train_time: 0.1229, lr: 0.000005
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [14/200], Step [3000/5005], Loss: 0.9694, read_time: 0.1118, train_time: 0.1227, lr: 0.000005
+Epoch [14/200], Step [4000/5005], Loss: 0.9677, read_time: 0.0455, train_time: 0.1225, lr: 0.000005
+Epoch [14/200], Step [5000/5005], Loss: 0.9660, read_time: 0.1141, train_time: 0.1229, lr: 0.000005
+Epoch [14/200], avg_Loss: 0.9661, avg_acc: 0.7665
+ImageNet val acc is:0.7175
+avg_acc: 0.7175 model saved!
+model saved!
+
+Epoch [15/200], Step [1000/5005], Loss: 0.9647, read_time: 0.0594, train_time: 0.1230, lr: 0.000005
+Epoch [15/200], Step [2000/5005], Loss: 0.9665, read_time: 0.0998, train_time: 0.1225, lr: 0.000005
+Epoch [15/200], Step [3000/5005], Loss: 0.9635, read_time: 0.1097, train_time: 0.1224, lr: 0.000005
+Epoch [15/200], Step [4000/5005], Loss: 0.9643, read_time: 0.0134, train_time: 0.1225, lr: 0.000005
+Epoch [15/200], Step [5000/5005], Loss: 0.9663, read_time: 0.0374, train_time: 0.1232, lr: 0.000005
+Epoch [15/200], avg_Loss: 0.9663, avg_acc: 0.7669
+ImageNet val acc is:0.7169
+model saved!
+
+Epoch [16/200], Step [1000/5005], Loss: 0.9645, read_time: 0.0749, train_time: 0.1232, lr: 0.000005
+Epoch [16/200], Step [2000/5005], Loss: 0.9623, read_time: 0.0978, train_time: 0.1227, lr: 0.000005
+Epoch [16/200], Step [3000/5005], Loss: 0.9623, read_time: 0.0793, train_time: 0.1227, lr: 0.000005
+Epoch [16/200], Step [4000/5005], Loss: 0.9649, read_time: 0.0195, train_time: 0.1226, lr: 0.000005
+Epoch [16/200], Step [5000/5005], Loss: 0.9657, read_time: 0.1087, train_time: 0.1229, lr: 0.000005
+Epoch [16/200], avg_Loss: 0.9658, avg_acc: 0.7661
+ImageNet val acc is:0.7165
+model saved!
+
+Epoch [17/200], Step [1000/5005], Loss: 0.9643, read_time: 0.0714, train_time: 0.1230, lr: 0.000005
+Epoch [17/200], Step [2000/5005], Loss: 0.9672, read_time: 0.0917, train_time: 0.1227, lr: 0.000005
+Epoch [17/200], Step [3000/5005], Loss: 0.9650, read_time: 0.1071, train_time: 0.1231, lr: 0.000005
+Epoch [17/200], Step [4000/5005], Loss: 0.9657, read_time: 0.0299, train_time: 0.1229, lr: 0.000005
+Epoch [17/200], Step [5000/5005], Loss: 0.9645, read_time: 0.0114, train_time: 0.1228, lr: 0.000005
+Epoch [17/200], avg_Loss: 0.9645, avg_acc: 0.7672
+ImageNet val acc is:0.7167
+model saved!
+
+Epoch [18/200], Step [1000/5005], Loss: 0.9667, read_time: 0.0455, train_time: 0.1231, lr: 0.000005
+Epoch [18/200], Step [2000/5005], Loss: 0.9616, read_time: 0.0175, train_time: 0.1224, lr: 0.000005
+Epoch [18/200], Step [3000/5005], Loss: 0.9642, read_time: 0.0987, train_time: 0.1228, lr: 0.000005
+Epoch [18/200], Step [4000/5005], Loss: 0.9628, read_time: 0.0898, train_time: 0.1228, lr: 0.000005
+Epoch [18/200], Step [5000/5005], Loss: 0.9638, read_time: 0.0940, train_time: 0.1228, lr: 0.000005
+Epoch [18/200], avg_Loss: 0.9638, avg_acc: 0.7673
+ImageNet val acc is:0.7170
+model saved!
+
+Epoch [19/200], Step [1000/5005], Loss: 0.9710, read_time: 0.0747, train_time: 0.1231, lr: 0.000005
+Epoch [19/200], Step [2000/5005], Loss: 0.9616, read_time: 0.0770, train_time: 0.1233, lr: 0.000005
+Epoch [19/200], Step [3000/5005], Loss: 0.9612, read_time: 0.0718, train_time: 0.1231, lr: 0.000005
+/usr/local/lib/python3.6/dist-packages/PIL/TiffImagePlugin.py:792: UserWarning: Corrupt EXIF data.  Expecting to read 4 bytes but only got 0. 
+  warnings.warn(str(msg))
+Epoch [19/200], Step [4000/5005], Loss: 0.9628, read_time: 0.0045, train_time: 0.1228, lr: 0.000005
+Epoch [19/200], Step [5000/5005], Loss: 0.9639, read_time: 0.0447, train_time: 0.1227, lr: 0.000005
+Epoch [19/200], avg_Loss: 0.9639, avg_acc: 0.7678
+ImageNet val acc is:0.7158
+model saved!
+
+Epoch [20/200], Step [1000/5005], Loss: 0.9613, read_time: 0.0861, train_time: 0.1230, lr: 0.000005
+
