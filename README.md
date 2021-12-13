@@ -24,8 +24,11 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
 
 目标精度：71.7%
 实现：71.56%
-模型参数下载地址：百度网盘链接：https://pan.baidu.com/s/1A2az_B51ywsUbDCAFvXTvQ 
+模型参数已经在output文件夹中存放     
+
+也可以在百度网盘上下载，下载地址：百度网盘链接：https://pan.baidu.com/s/1A2az_B51ywsUbDCAFvXTvQ 
 提取码：6ib9     
+
 ### 2.1 log信息说明
 训练过程可以看项目中的log文件夹下的信息，由于aistudio上的脚本任务最多只能运行72个小时，把训练过程分成多个步骤进行训练，可以看见log中的信息，当然4个train-0.log并不是在同一个环境上跑的，
 *  train-0-(1).log是在aistudio上4块Tesla V100，batch_size为256*4     lr:采用先上升，在下降。从0.0002-线性上升到0.0010，再依次下降0.0005
@@ -92,11 +95,11 @@ ImageNet final val acc is:0.7156
 |-- T2T_ViT_Paddle
     |-- log      #日志
     |   |-- trainer-0-信息不全.log 
-    |   |-- val-workerlog.0 
-    |   |--trainer-0-(1).log   #有时间信息  第一步
-    |   |--trainer-0-(2).log   # 第二步训练
-    |   |--trainer-0-(3).log   # 第三步训练
-    |   |--trainer-0-(4).log   # 在单卡上训练模型
+    |   |-- val-workerlog.0    #验证实验结果
+    |   |-- trainer-0-(1).log   #有时间信息  第一步
+    |   |-- trainer-0-(2).log   # 第二步训练
+    |   |-- trainer-0-(3).log   # 第三步训练
+    |   |-- trainer-0-(4).log   # 在单卡上训练模型
     |-- lit_data    #模型目录
     |-- output    #模型目录
     |-- scripts   #运行脚本
