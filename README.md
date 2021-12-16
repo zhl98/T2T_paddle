@@ -118,5 +118,17 @@ ImageNet final val acc is:0.7156
 
 ```
 
+## 6. 引用
 
 
+```
+@InProceedings{Yuan_2021_ICCV,
+    author    = {Yuan, Li and Chen, Yunpeng and Wang, Tao and Yu, Weihao and Shi, Yujun and Jiang, Zi-Hang and Tay, Francis E.H. and Feng, Jiashi and Yan, Shuicheng},
+    title     = {Tokens-to-Token ViT: Training Vision Transformers From Scratch on ImageNet},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {558-567}
+}
+
+```
