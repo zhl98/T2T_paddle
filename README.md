@@ -99,7 +99,9 @@ ImageNet final val acc is:0.7156
     |   |-- trainer-0-(2).log   # 第二步训练
     |   |-- trainer-0-(3).log   # 第三步训练
     |   |-- trainer-0-(4).log   # 在单卡上训练模型
-    |-- lit_data    #模型目录
+    |-- config     #参数
+    |   |-- t2t_vit_7.yaml 
+    |-- lit_data    #数据目录
     |-- output    #模型目录
     |-- scripts   #运行脚本
     |   |-- eval.sh
@@ -112,8 +114,10 @@ ImageNet final val acc is:0.7156
         |-- train.py	 #训练代码
         |-- val.py		 #验证代码
         |-- predict.py	 #预测代码
+        |-- config.py	 #参数代码
     |-- README.md      
     |-- requirements.txt
+    |-- LICENSE
 
 ```
 
