@@ -428,12 +428,12 @@ class T2T_ViT(nn.Layer):
         return x
 
 
-def t2t_vit_7(pretrained=False, **kwargs):
+def t2t_vit_7(pretrained=False,model_path ='' ,**kwargs):
     model = T2T_ViT(
         tokens_type='performer', embed_dim=256, depth=7, 
         num_heads=4, mlp_ratio=2., **kwargs
     )
     if pretrained:
-        params = paddle.load('./output/t2t_vit_7.pdparams')
+        params = paddle.load(model_path)
         model.set_dict(params)
     return model

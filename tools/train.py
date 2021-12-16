@@ -11,58 +11,81 @@ from paddle.io import DistributedBatchSampler, DataLoader
 from scheduler import WarmupCosineScheduler
 from PIL import Image
 from paddle.vision import transforms
-
+import time 
 from common import Attention as Attention_Pure 
 from common import Unfold  
 from common import add_parameter  
 from common import DropPath, Identity, Mlp  
 from common import orthogonal_, trunc_normal_, zeros_, ones_ 
-
+from config import get_config,configs
 from dataset import get_dataset
 from t2t import t2t_vit_7
-
+from sys import argv
+import sys, getopt
 
 #use_gpu = True
 #paddle.set_device('gpu:1') if use_gpu else paddle.set_device('cpu')
 dist.init_parallel_env()
 
 if __name__ == '__main__':
-    num_epochs = 200
-    loss_fun  = nn.CrossEntropyLoss()
 
-    model = t2t_vit_7(True)
+    file_path = './config/t2t_vit_7.yaml'
+    opts, args = getopt.getopt(sys.argv[1:], "t:")
+    for op, value in opts:
+        if op == "-t":
+            file_path = value
+            print(file_path)
+    
+    config = get_config(file_path)
+
+    num_epochs = config.NUM_EPOCHS
+    loss_fun  = nn.CrossEntropyLoss()
+    if config.PRE_TRAIN:
+        model = t2t_vit_7(pretrained = config.PRE_TRAIN,model_path = config.MODEL_PATH)
+    else:
+        model = t2t_vit_7(pretrained = config.PRE_TRAIN)
     #model = paddle.Model(model)
 
     model = paddle.DataParallel(model)
     model.train()
 
-    dataset_train = get_dataset(mode = 'train')
+    dataset_train = get_dataset(config.TRAIN_DATASET_PATH,config.TRAIN_DATASET_LABEL_PATH,mode = 'train')
     #dataset_train = ImageFolder('ILSVRC2012_w/train', transforms_train)
-    train_sampler = DistributedBatchSampler(dataset_train, batch_size=256, drop_last=False,shuffle=True )
-    dataloader_train = paddle.io.DataLoader(dataset_train,num_workers=8,batch_sampler = train_sampler)
+    train_sampler = DistributedBatchSampler(dataset_train, batch_size = config.TRAIN_BATCH_SIZE, drop_last=False,shuffle=True )
+    dataloader_train = paddle.io.DataLoader(dataset_train,num_workers = config.TRAIN_NUM_WORKS,batch_sampler = train_sampler)
 
-    #dataloader_train = paddle.io.DataLoader(dataset_train,batch_size=128,num_workers=48,shuffle=True)
-    dataset_val = get_dataset( mode='val')
-    val_sampler = DistributedBatchSampler(dataset_val, batch_size=64, drop_last=False)
-    dataloader_val = paddle.io.DataLoader(dataset_val,batch_sampler = val_sampler,num_workers=4)
 
-    scheduler = WarmupCosineScheduler(learning_rate = 0.0001,
-                                          warmup_start_lr = 1e-8,
-                                          start_lr=0.0001,
-                                          end_lr = 5e-5,
-                                          warmup_epochs = 5,
-                                          total_epochs = 310,
-                                          last_epoch = 0,
+    dataset_val = get_dataset( config.VAL_DATASET_PATH, config.VAL_DATASET_LABEL_PATH,mode = 'val' )
+    val_sampler = DistributedBatchSampler(dataset_val, batch_size = config.VAL_BATCH_SIZE, drop_last=False)
+    dataloader_val = paddle.io.DataLoader(dataset_val,batch_sampler = val_sampler,num_workers = config.VAL_NUM_WORKS)
+
+    
+    if config.USE_WARMUP:
+        scheduler = WarmupCosineScheduler(learning_rate = config.BASE_LR,
+                                          warmup_start_lr = float(config.WARMUP_START_LR),
+                                          start_lr = config.BASE_LR,
+                                          end_lr = float(config.END_LR),
+                                          warmup_epochs = config.WARMUP_EPOCHS,
+                                          total_epochs = config.NUM_EPOCHS,
+                                          last_epoch = config.LAST_EPOCHS,
                                           )
-                                
-    optimizer = paddle.optimizer.AdamW(
-                parameters=model.parameters(),
-                learning_rate=scheduler,
-                weight_decay=0.05,  #0.03可以试一试
-                beta1 = 0.9,
-                beta2 = 0.999,
-                epsilon = 1e-8,
-                grad_clip = paddle.nn.ClipGradByGlobalNorm(1.0) )
+        optimizer = paddle.optimizer.AdamW(
+                    parameters = model.parameters(),
+                    learning_rate = scheduler,
+                    weight_decay = config.WEIGHT_DECAY,  #0.03可以试一试
+                    beta1 = 0.9,
+                    beta2 = 0.999,
+                    epsilon = 1e-8,
+                    grad_clip = paddle.nn.ClipGradByGlobalNorm(1.0) )
+    else:
+        optimizer = paddle.optimizer.AdamW(
+                    parameters = model.parameters(),
+                    learning_rate = config.BASE_LR,
+                    weight_decay = config.WEIGHT_DECAY,  #0.03可以试一试
+                    beta1 = 0.9,
+                    beta2 = 0.999,
+                    epsilon = 1e-8,
+                    grad_clip = paddle.nn.ClipGradByGlobalNorm(1.0) )
     #optimizer = paddle.optimizer.Momentum(parameters=model.parameters(), learning_rate=0.05,weight_decay = 0.03)
 
     #model.prepare(optimizer = optimizer,loss = loss_fun,metrics=paddle.metric.Accuracy(topk=(1, 5)))
@@ -120,8 +143,17 @@ if __name__ == '__main__':
             val_accs = []
             for X,Y in dataloader_val:
                 pre_y = model(X)      
-                Y =paddle.reshape(Y,shape=[-1, 1]) 
-                acc = paddle.metric.accuracy(input=pre_y, label=Y) 
+
+                Y =paddle.reshape(Y,shape=[-1, 1])  
+                all_Y = []
+                paddle.distributed.all_gather(all_Y, Y)
+                all_labels = paddle.concat(all_Y, 0)
+        
+                all_pre_y = []
+                paddle.distributed.all_gather(all_pre_y, pre_y)
+                all_pre = paddle.concat(all_pre_y, 0)
+        
+                acc = paddle.metric.accuracy(input=all_pre, label=all_labels) 
                 val_accs.append(acc)
             val_acc = np.sum(val_accs) / len(val_accs)
             print("ImageNet val acc is:%.4f" %val_acc)
@@ -135,16 +167,21 @@ if __name__ == '__main__':
 
 
     print("train ended!\n")  
-
-    
-    paddle.save(model.state_dict(), "./output/t2t_vit_7_200.pdparams")
-    
+ 
     model.eval()
     val_accs = []
     for X,Y in dataloader_val:
         pre_y = model(X)      
-        Y =paddle.reshape(Y,shape=[-1, 1]) 
-        acc = paddle.metric.accuracy(input=pre_y, label=Y) 
+        Y =paddle.reshape(Y,shape=[-1, 1])  
+        all_Y = []
+        paddle.distributed.all_gather(all_Y, Y)
+        all_labels = paddle.concat(all_Y, 0)
+        
+        all_pre_y = []
+        paddle.distributed.all_gather(all_pre_y, pre_y)
+        all_pre = paddle.concat(all_pre_y, 0)
+        
+        acc = paddle.metric.accuracy(input=all_pre, label=all_labels) 
         val_accs.append(acc)
     val_acc = np.sum(val_accs) / len(val_accs)
     print("==============================================\n") 

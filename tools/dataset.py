@@ -5,7 +5,7 @@ from paddle.vision import transforms, datasets, image_load
 
 class ImageNet2012Dataset(Dataset):
 
-    def __init__(self, file_folder, mode="train", transform=None):
+    def __init__(self, file_folder, label_file, mode="train", transform=None):
         """Init ImageNet2012 Dataset with dataset file path, mode(train/val), and transform"""
         super(ImageNet2012Dataset, self).__init__()
         assert mode in ["train", "val"]
@@ -14,10 +14,9 @@ class ImageNet2012Dataset(Dataset):
         self.img_path_list = []
         self.label_list = []
 
-        if mode == "train":
-            self.list_file = "lit_data/train.txt"
-        else:
-            self.list_file = "lit_data/val.txt"
+        
+        self.list_file = label_file
+        
 
         with open(self.list_file, 'r') as infile:
             for line in infile:
@@ -57,17 +56,16 @@ vals_transform = transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize([0.485, 0.456, 0.406],[0.229, 0.224, 0.225])])
 
-def get_dataset(mode='train'):
-  
+def get_dataset(data_file,data_label,mode='train',):
 
     assert mode in ['train', 'val']
     
     if mode == 'train':
-        dataset = ImageNet2012Dataset('lit_data/train',
+        dataset = ImageNet2012Dataset(data_file, data_label,
                                           mode=mode,
                                           transform=get_train_transforms())
     else:
-        dataset = ImageNet2012Dataset('lit_data/val',
+        dataset = ImageNet2012Dataset(data_file, data_label,
                                           mode=mode,
                                           transform=vals_transform)
     return dataset

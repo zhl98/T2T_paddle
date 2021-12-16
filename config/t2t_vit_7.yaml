@@ -1,0 +1,23 @@
+DATA_PATH:
+    TRAIN_DATASET_PATH: "lit_data/train"
+    TRAIN_DATASET_LABEL_PATH: "lit_data/train.txt"
+    VAL_DATASET_PATH: "lit_data/val"
+    VAL_DATASET_LABEL_PATH: "lit_data/val.txt"
+    
+MODEL_PATH: "output/t2t_vit_7.pdparams"       
+TRAIN:
+    PRE_TRAIN: False
+    TRAIN_BATCH_SIZE: 256
+    TRAIN_NUM_WORKS: 8
+    VAL_BATCH_SIZE: 64
+    VAL_NUM_WORKS: 4
+    
+SCHEDULER:
+    NUM_EPOCHS: 300
+    LAST_EPOCHS: 0
+    WEIGHT_DECAY: 0.3
+    BASE_LR: 0.003
+    USE_WARMUP: True
+    WARMUP_EPOCHS: 3
+    WARMUP_START_LR: 1e-6
+    END_LR: 5e-4
