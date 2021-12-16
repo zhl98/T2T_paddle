@@ -5,4 +5,4 @@
 python  ./tools/train.py
 
 #4块gpu进行训练-单机多卡
-#ython -m paddle.distributed.launch --gpus '0,1,2,3' ./tools/train.py
+#python -m paddle.distributed.launch --gpus '0,1,2,3' ./tools/train.py

@@ -50,14 +50,13 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
     cd T2T_paddle
 ```
 ### 第二步：修改代码路径
-修改dataset.py中的数据集路径    
-1. 修改dataset的地址
-2. 修改label.txt的地址    
+修改/config/t2t_vit_7.yaml中的数据集路径       
 项目中默认使用lit_data中的路径进行测试
 ### 第三步：训练模型
 运行sh文件，在文件中可以选择单卡或是多卡训练  
 ```
     bash ./scripts/train.sh
+    
 ```
 部分训练日志如下所示。
 ```

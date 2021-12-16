@@ -35,7 +35,7 @@ if __name__ == '__main__':
     data = image_load(r'lit_data\train\n07579787/n07579787_1228.JPEG').convert('RGB')
     data = vals_transform(data)
     data = data.unsqueeze(0)
-    model = t2t_vit_7(pretrained = True)
+    model = t2t_vit_7(pretrained = True,model_path = "output/t2t_vit_7.pdparams")
     pre_y = model(data)
     
     print("class_id is: {}".format(pre_y.argmax().item()))

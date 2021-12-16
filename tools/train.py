@@ -30,12 +30,13 @@ dist.init_parallel_env()
 if __name__ == '__main__':
 
     file_path = './config/t2t_vit_7.yaml'
+    '''
     opts, args = getopt.getopt(sys.argv[1:], "t:")
     for op, value in opts:
         if op == "-t":
             file_path = value
             print(file_path)
-    
+    '''
     config = get_config(file_path)
 
     num_epochs = config.NUM_EPOCHS
