@@ -1,4 +1,4 @@
-# 基于Paddle实现  ——Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet
+# 基于Paddle实现  ——Tokens-to-Token ViT: Training Vision Transformers from Scratch on ImageNet,[arxiv](https://arxiv.org/abs/2101.11986)
 ## 1. 简介
 ### 主要改进
 * 在中型数据集（例如 ImageNet）上从头开始训练时，ViT 与CNN相比性能较差。作者发现这是因为：
