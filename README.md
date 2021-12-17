@@ -51,7 +51,9 @@ aistudio上的地址为：https://aistudio.baidu.com/aistudio/datasetdetail/7980
 ```
 ### 第二步：修改代码参数
 修改`/config/t2t_vit_7.yaml`中的数据集路径       
-项目中默认使用lit_data中的路径进行测试
+项目中默认使用lit_data中的路径进行测试    
+修改`/config/t2t_vit_7.yaml`中的参数信息，比如学习率，epoch大小等。
+
 ### 第三步：训练模型
 运行sh文件，在文件中可以选择单卡或是多卡训练  
 ```
