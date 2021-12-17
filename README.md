@@ -122,8 +122,11 @@ ImageNet final val acc is:0.7156
     |-- LICENSE
 
 ```
+## 6. LICENSE
 
-## 6. 引用
+本项目的发布受[Apache 2.0 license](./LICENSE)许可认证。
+
+## 7. 引用
 
 
 ```
